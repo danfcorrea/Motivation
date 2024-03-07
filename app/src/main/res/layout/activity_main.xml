@@ -18,13 +18,15 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
+            android:id="@+id/imageAll"
             android:layout_width="0dp"
             android:layout_height="32dp"
             android:layout_weight="1"
             android:src="@drawable/ic_all_inclusive"
-            app:tint="@color/md_theme_secondaryContainer" />
+            app:tint="@color/md_theme_onPrimary" />
 
         <ImageView
+            android:id="@+id/imageHappy"
             android:layout_width="0dp"
             android:layout_height="32dp"
             android:layout_weight="1"
@@ -32,6 +34,7 @@
             app:tint="@color/md_theme_onPrimary" />
 
         <ImageView
+            android:id="@+id/imageSun"
             android:layout_width="0dp"
             android:layout_height="32dp"
             android:layout_weight="1"
@@ -54,13 +57,14 @@
         android:id="@+id/textMessage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Mensagem!"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:paddingHorizontal="32dp"
+        android:textAlignment="center"/>
 
     <View
         android:layout_width="128dp"
