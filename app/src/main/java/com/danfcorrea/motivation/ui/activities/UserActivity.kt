@@ -18,6 +18,7 @@ class UserActivity : AppCompatActivity(), View.OnClickListener {
         val view = binding.root
         setContentView(view)
 
+        handleUser()
         binding.buttonSave.setOnClickListener(this)
     }
 
@@ -26,13 +27,17 @@ class UserActivity : AppCompatActivity(), View.OnClickListener {
             handleSave()
     }
 
+    private fun handleUser(){
+        if(userExists())
+            startMainActivity()
+    }
+
     private fun handleSave() {
         if(nameIsValid())
             binding.editName.error = "Nome Inválido"
         else {
             save(MotivationConstants.KEY.USER_NAME, binding.editName.text.toString())
-            startActivity(Intent(this, MainActivity::class.java))
-            finish()
+            startMainActivity()
         }
     }
 
@@ -42,5 +47,14 @@ class UserActivity : AppCompatActivity(), View.OnClickListener {
 
     private fun nameIsValid(): Boolean {
         return binding.editName.text.isNullOrBlank()
+    }
+
+    private fun userExists(): Boolean{
+        return SharedPreferences(this).getString(MotivationConstants.KEY.USER_NAME).isNotEmpty()
+    }
+
+    private fun startMainActivity(){
+        startActivity(Intent(this, MainActivity::class.java))
+        finish()
     }
 }
