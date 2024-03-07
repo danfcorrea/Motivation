@@ -25,7 +25,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     private fun handleName(){
-        val name = SharedPreferences(this).getString("USER_NAME")
+        val name = SharedPreferences(this).getString(MotivationConstants.KEY.USER_NAME)
         binding.textHello.text = buildString {
             append(getString(R.string.hello))
             append(" ")

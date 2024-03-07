@@ -27,7 +27,7 @@ class UserActivity : AppCompatActivity(), View.OnClickListener {
         if(nameIsValid())
             binding.editName.error = "Nome Inválido"
         else {
-            save("USER_NAME", binding.editName.text.toString())
+            save(MotivationConstants.KEY.USER_NAME, binding.editName.text.toString())
             startActivity(Intent(this, MainActivity::class.java))
             finish()
         }
