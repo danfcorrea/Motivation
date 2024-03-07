@@ -14,18 +14,22 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         val view = binding.root
         setContentView(view)
 
-        val name = SharedPreferences(this).getString("USER_NAME")
-        binding.textHello.text = buildString {
-            append(getString(R.string.hello))
-            append(" ")
-            append(name)
-        }
+        handleName()
         binding.buttonNewMessage.setOnClickListener(this)
     }
 
     override fun onClick(v: View) {
         if (v.id == R.id.buttonNewMessage){
             TODO("Gerar nova Frase")
+        }
+    }
+
+    private fun handleName(){
+        val name = SharedPreferences(this).getString("USER_NAME")
+        binding.textHello.text = buildString {
+            append(getString(R.string.hello))
+            append(" ")
+            append(name)
         }
     }
 
