@@ -1,4 +1,4 @@
-package com.danfcorrea.motivation
+package com.danfcorrea.motivation.models
 
 class MotivationConstants private constructor(){
     object KEY{

@@ -1,4 +1,4 @@
-package com.danfcorrea.motivation
+package com.danfcorrea.motivation.services
 
 import android.content.Context
 import android.content.SharedPreferences

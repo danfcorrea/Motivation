@@ -1,9 +1,12 @@
-package com.danfcorrea.motivation
+package com.danfcorrea.motivation.ui.activities
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import com.danfcorrea.motivation.models.MotivationConstants
+import com.danfcorrea.motivation.R
+import com.danfcorrea.motivation.services.SharedPreferences
 import com.danfcorrea.motivation.databinding.ActivityUserBinding
 
 class UserActivity : AppCompatActivity(), View.OnClickListener {
